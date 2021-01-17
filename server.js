@@ -95,7 +95,7 @@ client.on("guildMemberAdd", async member => {
 });
 
 client.on("message", async message => {
-  if (message.channel.name == "｜:ghost:｜𝙲𝚑𝚊𝚝-𝚆𝚒𝚝𝚑-𝙲𝚛𝚎𝚎𝚙𝚢") {
+  if (message.channel.name == "｜👻｜𝙲𝚑𝚊𝚝-𝚆𝚒𝚝𝚑-𝙲𝚛𝚎𝚎𝚙𝚢") {
     if (message.author.bot) return;
     message.content = message.content
       .replace(/@(everyone)/gi, "everyone")
