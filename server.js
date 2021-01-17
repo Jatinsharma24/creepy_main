@@ -108,7 +108,7 @@ client.on("message", async message => {
     fetch(
       `https://api.affiliateplus.xyz/api/chatbot?message=${encodeURIComponent(
         message.content
-      )}&botname=${client.user.username}&ownername=KHANMANAN#1000`
+      )}&botname=${client.user.username}&ownername=Cool dude 69#5158`
     )
       .then(res => res.json())
       .then(data => {
