@@ -46,7 +46,7 @@ client.on("ready", () => {
 client.on("message", async message => {
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
   if (message.content.match(prefixMention)) {
-    return message.reply(`My prefix is \`${prefix}\``);
+    return message.reply(`Hey do you like horror stuff 😈`);
   }
 
   if (message.author.bot) return;
@@ -95,13 +95,13 @@ client.on("guildMemberAdd", async member => {
 });
 
 client.on("message", async message => {
-  if (message.channel.name == "chatbot") {
+  if (message.channel.name == "｜:ghost:｜𝙲𝚑𝚊𝚝-𝚆𝚒𝚝𝚑-𝙲𝚛𝚎𝚎𝚙𝚢") {
     if (message.author.bot) return;
     message.content = message.content
       .replace(/@(everyone)/gi, "everyone")
       .replace(/@(here)/gi, "here");
     if (message.content.includes(`@`)) {
-      return message.channel.send(`**:x: Please dont mention anyone**`);
+      return message.channel.send(``);
     }
     message.channel.startTyping();
     if (!message.content) return message.channel.send("Please say something.");
@@ -112,9 +112,7 @@ client.on("message", async message => {
     )
       .then(res => res.json())
       .then(data => {
-        message.channel.send(
-          `> ${message.content} \n <@${message.author.id}> ${data.message}`
-        );
+        message.channel.send(`> ${message.content} \n ${data.message}`);
       });
     message.channel.stopTyping();
   }
