@@ -40,7 +40,7 @@ client.aliases = new discord.Collection();
 client.on("ready", () => {
   console.log(` ${client.user.username} is turned on`);
   client.user
-    .setActivity(`C!help | new premium commands`, { type: "PLAYING" })
+    .setActivity(`C!help | new 
     .catch(error => console.log(error));
 });
 client.on("message", async message => {
