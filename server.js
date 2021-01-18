@@ -39,16 +39,13 @@ client.aliases = new discord.Collection();
 
 client.on("ready", () => {
   console.log(` ${client.user.username} is turned on`);
+  client.user;
   client.user
-    .setActivity(`C!help | new 
+    .setActivity(`C!help | Now you can chat with me  `, { type: "LISTENING" })
     .catch(error => console.log(error));
 });
 client.on("message", async message => {
   const prefixMention = new RegExp(`^<@!?${client.user.id}>( |)$`);
-  if (message.content.match(prefixMention)) {
-    return message.reply(`Hey do you like horror stuff 😈`);
-  }
-
   if (message.author.bot) return;
   if (!message.guild) return;
   if (!message.content.startsWith(prefix)) return;
